@@ -25,7 +25,7 @@ const ClientStories = () => {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Client Stories</h2>
-          <p className="text-slate-600">
+          <p className="text-slate-700">
             Don't just take our word for it. Here's what our partners have to say about working with us.
           </p>
         </div>
@@ -50,7 +50,7 @@ const ClientStories = () => {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-slate-900">{testimonial.name}</h4>
+                <h4 className="font-bold text-brand-primary">{testimonial.name}</h4>
                 <p className="text-sm text-slate-500">{testimonial.company}</p>
               </div>
             </div>

@@ -35,7 +35,7 @@ const FAQ = () => {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
-          <p className="text-slate-600">
+          <p className="text-slate-700">
             Find answers to common questions about our services and delivery process.
           </p>
         </div>
@@ -49,8 +49,8 @@ const FAQ = () => {
               >
                 <span className="font-bold text-slate-900">{faq.question}</span>
                 <svg
-                  className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${
-                    activeIndex === index ? 'rotate-180' : ''
+                  className={`w-5 h-5 transition-transform duration-300 ${
+                    activeIndex === index ? 'rotate-180 text-brand-accent' : 'text-slate-500'
                   }`}
                   fill="none"
                   stroke="currentColor"

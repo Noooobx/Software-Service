@@ -28,7 +28,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="hover:text-brand-primary transition-colors text-sm">
+                    <a href="#" className="hover:text-brand-accent transition-colors text-sm">
                       {link}
                     </a>
                   </li>
@@ -55,9 +55,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter email"
-                className="bg-slate-800 border-none rounded-l-lg px-4 py-2 text-sm focus:ring-1 focus:ring-brand-primary w-full"
+                className="bg-slate-800 border-none rounded-l-lg px-4 py-2 text-sm focus:ring-1 focus:ring-brand-accent w-full"
               />
-              <button className="bg-brand-primary text-white px-4 py-2 rounded-r-lg text-sm font-medium hover:bg-brand-secondary transition-colors">
+              <button className="bg-brand-accent text-white px-4 py-2 rounded-r-lg text-sm font-medium hover:bg-blue-700 transition-colors">
                 Join
               </button>
             </form>

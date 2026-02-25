@@ -62,7 +62,7 @@ const Services = () => {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Services</h2>
-          <p className="text-slate-600">
+          <p className="text-slate-700">
             We provide comprehensive IT solutions designed to help your business thrive in the digital age.
           </p>
         </div>
@@ -73,12 +73,12 @@ const Services = () => {
               key={service.title}
               className="p-8 bg-white border border-slate-100 rounded-xl hover:shadow-xl transition-all duration-300 group"
             >
-              <div className="w-12 h-12 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+              <div className="w-12 h-12 bg-brand-accent/10 text-brand-accent rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors duration-300">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
               <p className="text-slate-600 leading-relaxed mb-6">{service.description}</p>
-              <a href="#" className="inline-flex items-center text-sm font-semibold text-brand-primary hover:text-brand-secondary">
+              <a href="#" className="inline-flex items-center text-sm font-semibold text-brand-accent hover:text-brand-primary">
                 Learn more
                 <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

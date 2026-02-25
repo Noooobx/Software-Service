@@ -18,10 +18,10 @@ const About = () => {
               Our team of experts combines technical excellence with business acumen to create value through digital transformation. We believe in building long-term partnerships with our clients.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="px-6 py-3 bg-brand-primary text-white rounded-lg font-medium hover:bg-brand-secondary transition-colors">
+              <button className="btn-primary">
                 Meet the Team
               </button>
-              <button className="px-6 py-3 border border-slate-200 text-slate-700 rounded-lg font-medium hover:bg-white transition-colors">
+              <button className="btn-outline border-slate-200 text-slate-700 hover:border-brand-accent hover:text-white">
                 Our Mission
               </button>
             </div>
@@ -35,11 +35,11 @@ const About = () => {
                   index === 0 ? 'bg-white shadow-xl sm:col-span-2 md:col-span-1 md:row-span-2' : 'bg-white'
                 }`}
               >
-                <span className="text-4xl md:text-5xl font-extrabold text-brand-primary mb-2">{stat.value}</span>
+                <span className="text-4xl md:text-5xl font-extrabold text-brand-accent mb-2">{stat.value}</span>
                 <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide">{stat.label}</span>
               </div>
             ))}
-            <div className="p-8 bg-brand-primary rounded-2xl flex flex-col items-center justify-center text-center text-white">
+            <div className="p-8 bg-brand-accent rounded-2xl flex flex-col items-center justify-center text-center text-white">
               <span className="text-3xl font-bold mb-1">Global</span>
               <span className="text-sm font-medium opacity-80">Presence</span>
             </div>
