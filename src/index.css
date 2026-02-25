@@ -44,4 +44,32 @@
   .btn-ghost {
     @apply px-4 py-2 text-sm font-medium text-slate-600 hover:text-brand-accent hover:bg-slate-50 rounded-lg transition-all;
   }
+
+  /* Custom Dotted Scrollbar for Mobile */
+  @media (max-width: 767px) {
+    .scrollbar-dotted {
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
+    }
+
+    .scrollbar-dotted::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .scrollbar-dotted::-webkit-scrollbar-track {
+      background: transparent;
+      border-bottom: 2px dashed #e2e8f0; /* Dotted/Dashed indicator style */
+      margin-bottom: 8px;
+    }
+
+    .scrollbar-dotted::-webkit-scrollbar-thumb {
+      background-color: #94a3b8; /* Slate tone */
+      border-radius: 20px;
+    }
+    
+    /* Hide vertical scrollbar on these elements */
+    .scrollbar-dotted {
+      overflow-y: hidden;
+    }
+  }
 }
