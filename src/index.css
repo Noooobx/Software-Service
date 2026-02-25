@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for sticky header */
+}
+
 @theme {
   --color-brand-primary: #1A365D; /* Deep Navy for Enterprise Feel */
   --color-brand-accent: #2563EB;   /* Electric Blue for Highlights */
@@ -72,4 +77,18 @@
       overflow-y: hidden;
     }
   }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+  .animate-marquee-slow {
+    animation: marquee 80s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

@@ -1,126 +1,93 @@
 const Contact = () => {
   return (
-    <section id="contact" className="section-padding bg-slate-50">
-      <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Let's Connect</h2>
-          <p className="text-slate-600">
-            Have a project in mind? We'd love to hear from you. Send us a message and we'll get back to you within 24 hours.
-          </p>
-        </div>
+    <section id="contact" className="py-24 lg:py-32 bg-slate-900 relative overflow-hidden">
+      {/* Blueprint Watermark Background (Matching Portfolio) */}
+      <div className="absolute top-0 right-0 w-full h-full opacity-[0.05] pointer-events-none select-none overflow-hidden">
+        <svg className="w-[150%] h-[150%] -rotate-12 -translate-y-1/4" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 100H1000M0 200H1000M0 300H1000M0 400H1000M0 500H1000M0 600H1000M0 700H1000M0 800H1000M0 900H1000" stroke="#FFFFFF" strokeWidth="1" strokeDasharray="10 10"/>
+          <path d="M100 0V1000M200 0V1000M300 0V1000M400 0V1000M500 0V1000M600 0V1000M700 0V1000M800 0V1000M900 0V1000" stroke="#FFFFFF" strokeWidth="1" strokeDasharray="10 10"/>
+        </svg>
+      </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
-          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100">
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all"
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all"
-                    placeholder="john@example.com"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="service" className="block text-sm font-semibold text-slate-700 mb-2">Service Interested In</label>
-                <select
-                  id="service"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all appearance-none"
-                >
-                  <option value="">Select a service</option>
-                  <option value="software">Software Development</option>
-                  <option value="mobile">Mobile App Development</option>
-                  <option value="integration">System Integration</option>
-                  <option value="hardware">IT Hardware Supply</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
-                <textarea
-                  id="message"
-                  rows="4"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all"
-                  placeholder="Tell us about your project..."
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="btn-primary w-full"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+      <div className="container-custom px-4 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <div className="mb-8 lg:mb-12">
+              <h2 className="text-2xl md:text-4xl lg:text-6xl font-extrabold text-white mb-6 lg:mb-8 tracking-tight leading-[1.1]">
+                Let's <span className="text-brand-accent italic font-light">Connect</span>
+              </h2>
+              <p className="text-base md:text-xl text-slate-400 leading-relaxed font-medium border-l-4 border-brand-accent pl-6 max-w-xl">
+                Start a conversation about your technical future. Our experts are ready to build solutions that scale with your vision.
+              </p>
+            </div>
 
-          {/* Contact Info */}
-          <div className="flex flex-col justify-center">
-            <h3 className="text-2xl font-bold text-slate-900 mb-8">Contact Information</h3>
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-white rounded-lg shadow-sm border border-slate-100 flex items-center justify-center text-brand-accent flex-shrink-0">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900">Phone</h4>
-                  <p className="text-slate-600">+1 (555) 000-0000</p>
-                  <p className="text-xs text-slate-400">Available Mon-Fri, 9am-6pm PST</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-white rounded-lg shadow-sm border border-slate-100 flex items-center justify-center text-brand-accent flex-shrink-0">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="grid gap-6">
+              <div className="flex items-center space-x-4 group">
+                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-300">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 012-2V7a2 2 0 01-2-2H5a2 2 0 01-2 2v10a2 2 0 012 2z" />
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900">Email</h4>
-                  <p className="text-slate-600">contact@itsolutions.com</p>
-                  <p className="text-slate-600">support@itsolutions.com</p>
+                  <h3 className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-500 mb-0.5">Email Strategy</h3>
+                  <p className="text-base font-bold text-white">connect@itsolutions.com</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-white rounded-lg shadow-sm border border-slate-100 flex items-center justify-center text-brand-accent flex-shrink-0">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-center space-x-4 group">
+                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-300">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900">Location</h4>
-                  <p className="text-slate-600">123 Tech Plaza, Suite 400</p>
-                  <p className="text-slate-600">San Jose, CA 95110</p>
+                  <h3 className="text-[9px] uppercase tracking-[0.3em] font-black text-slate-500 mb-0.5">Global HQ</h3>
+                  <p className="text-base font-bold text-white">123 Tech Plaza, San Jose, CA</p>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-white rounded-lg shadow-sm border border-slate-100 flex items-center justify-center text-brand-accent flex-shrink-0">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+          <div className="relative mt-8 lg:mt-0">
+            {/* Background Glow */}
+            <div className="absolute -inset-4 bg-gradient-to-tr from-brand-accent/20 to-transparent blur-3xl rounded-full -z-10"></div>
+            
+            <div className="bg-white/5 backdrop-blur-xl p-6 md:p-12 rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl">
+              <form className="space-y-6 md:space-y-8">
+                <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="space-y-2">
+                    <label className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-500 pl-1">Identity</label>
+                    <input
+                      type="text"
+                      className="w-full px-5 py-3.5 bg-white/5 border border-white/10 rounded-xl md:rounded-2xl focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all text-white placeholder:text-slate-600 text-sm"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-500 pl-1">Channel</label>
+                    <input
+                      type="email"
+                      className="w-full px-5 py-3.5 bg-white/5 border border-white/10 rounded-xl md:rounded-2xl focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all text-white placeholder:text-slate-600 text-sm"
+                      placeholder="Your Email"
+                    />
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-slate-900">Working Hours</h4>
-                  <p className="text-slate-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-slate-600">Saturday: 10:00 AM - 2:00 PM</p>
+                <div className="space-y-2">
+                  <label className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-500 pl-1">Inquiry</label>
+                  <textarea
+                    rows="4"
+                    className="w-full px-5 py-3.5 bg-white/5 border border-white/10 rounded-xl md:rounded-2xl focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-all text-white placeholder:text-slate-600 text-sm"
+                    placeholder="Tell us about your project..."
+                  ></textarea>
                 </div>
-              </div>
+                <button
+                  type="submit"
+                  className="w-full py-4 md:py-5 text-[11px] font-black text-white bg-brand-accent rounded-xl md:rounded-2xl shadow-lg shadow-brand-accent/20 hover:scale-[1.02] active:scale-95 transition-all uppercase tracking-[0.3em]"
+                >
+                  Initiate Connection
+                </button>
+              </form>
             </div>
           </div>
         </div>

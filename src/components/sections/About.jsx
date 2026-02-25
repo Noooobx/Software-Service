@@ -5,25 +5,36 @@ const About = () => {
     { label: 'Years Experience', value: '5+' },
   ];
 
+  const features = [
+    'Custom Software Development',
+    'Cloud Infrastructure Management',
+    'Data Analytics & AI Solutions',
+    'Cybersecurity Consulting',
+  ];
+
   return (
-    <section id="about" className="section-padding bg-slate-50">
+    <section id="about" className="py-16 lg:py-24 bg-blue-50">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Who We Are</h2>
-            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              We are a technology-driven IT solutions company focused on delivering scalable software and infrastructure solutions for businesses.
+            <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">
+              Who <span className="text-brand-accent">We Are</span>
+            </h2>
+            <p className="text-base text-slate-600 mb-8 leading-relaxed">
+              Based in the heart of Silicon Valley, IT Solutions has been a pioneer in 
+              delivering enterprise-grade technology services.
             </p>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Our team of experts combines technical excellence with business acumen to create value through digital transformation. We believe in building long-term partnerships with our clients.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <button className="btn-primary">
-                Meet the Team
-              </button>
-              <button className="btn-outline border-slate-200 text-slate-700 hover:border-brand-accent hover:text-white">
-                Our Mission
-              </button>
+            <div className="space-y-4">
+              {features.map((feature) => (
+                <div key={feature} className="flex items-center space-x-3">
+                  <div className="w-5 h-5 bg-brand-accent/10 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-brand-accent" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-sm md:text-lg font-medium text-slate-700">{feature}</span>
+                </div>
+              ))}
             </div>
           </div>
 
