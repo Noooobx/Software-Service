@@ -31,23 +31,23 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-16 lg:py-24 bg-white">
+    <section id="faq" className="py-16 lg:py-24 bg-brand-bg border-t border-white/5">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
-          <p className="text-slate-700">
+          <h2 className="text-xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+          <p className="text-sm md:text-base text-slate-400">
             Find answers to common questions about our services and delivery process.
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-slate-100 rounded-xl overflow-hidden bg-slate-50/50">
+            <div key={index} className="border border-white/5 rounded-xl overflow-hidden bg-white/5">
               <button
-                className="w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors"
+                className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
                 onClick={() => toggleAccordion(index)}
               >
-                <span className="font-bold text-slate-900">{faq.question}</span>
+                <span className="font-bold text-white">{faq.question}</span>
                 <svg
                   className={`w-5 h-5 transition-transform duration-300 ${
                     activeIndex === index ? 'rotate-180 text-brand-accent' : 'text-slate-500'
@@ -64,7 +64,7 @@ const FAQ = () => {
                   activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 } overflow-hidden`}
               >
-                <div className="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100/50">
+                <div className="p-6 pt-0 text-slate-400 leading-relaxed border-t border-white/5">
                   {faq.answer}
                 </div>
               </div>

@@ -69,16 +69,16 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 lg:py-24 bg-white relative overflow-hidden">
+    <section id="services" className="py-16 lg:py-24 bg-brand-bg relative overflow-hidden">
       {/* Technical Grid Pattern */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
       
       <div className="container-custom relative z-10">
-        <div className="max-w-4xl mb-12 lg:mb-16">
-          <h2 className="text-3xl lg:text-6xl font-extrabold text-slate-900 mb-8 tracking-tight leading-[1.1]">
+        <div className="max-w-4xl mb-10 lg:mb-16">
+          <h2 className="text-xl md:text-4xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-[1.1]">
             Services <span className="text-brand-accent italic font-medium">We Offer</span>
           </h2>
-          <p className="text-base md:text-xl text-slate-600 leading-relaxed font-medium max-w-2xl border-l-4 border-slate-200 pl-6">
+          <p className="text-sm md:text-xl text-slate-400 leading-relaxed font-medium max-w-2xl border-l-4 border-white/10 pl-6">
             We provide secure and reliable technology solutions that help your business 
             grow and stay safe in a digital world.
           </p>
@@ -89,10 +89,10 @@ const Services = () => {
           {serviceList.map((service, index) => (
             <div
               key={service.title}
-              className={`p-8 md:p-10 bg-white border border-slate-200 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col min-w-[85vw] md:min-w-0 snap-start snap-always ${service.featured ? 'border-brand-accent/40 shadow-md ring-1 ring-brand-accent/5' : 'shadow-none'}`}
+              className={`p-8 md:p-10 bg-white/5 border border-white/10 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col min-w-[85vw] md:min-w-0 snap-start snap-always ${service.featured ? 'border-brand-accent/40 shadow-md ring-1 ring-brand-accent/5' : 'shadow-none'}`}
             >
               <div className="flex justify-between items-start mb-8">
-                <div className={`w-12 h-12 md:w-14 md:h-14 rounded flex items-center justify-center transition-all duration-300 ${service.featured ? 'bg-brand-primary text-white' : 'bg-slate-100 text-slate-600 group-hover:bg-slate-200'}`}>
+                <div className={`w-12 h-12 md:w-14 md:h-14 rounded flex items-center justify-center transition-all duration-300 ${service.featured ? 'bg-brand-primary text-white' : 'bg-white/5 text-slate-400 group-hover:bg-white/10 group-hover:text-brand-accent'}`}>
                   {service.icon}
                 </div>
                 {service.badge && (
@@ -103,18 +103,18 @@ const Services = () => {
               </div>
               
               <div className="flex-1">
-                <h3 className="text-lg md:text-2xl font-bold text-slate-900 mb-4 tracking-tight">
+                <h3 className="text-base md:text-2xl font-bold text-white mb-3 tracking-tight">
                   {service.title}
                 </h3>
-                <p className="text-[11px] md:text-[14px] font-bold text-slate-500 mb-4 leading-tight uppercase tracking-wide">
+                <p className="text-[10px] md:text-[14px] font-bold text-slate-500 mb-3 leading-tight uppercase tracking-wide">
                   {service.benefit}
                 </p>
-                <p className="text-slate-600 leading-relaxed text-[13px] md:text-[15px] font-medium italic">
+                <p className="text-slate-400 leading-relaxed text-sm md:text-[15px] font-medium italic">
                   {service.description}
                 </p>
               </div>
 
-              <div className="mt-10 pt-8 border-t border-slate-100">
+              <div className="mt-10 pt-8 border-t border-white/5">
                 <a href="#" className="inline-flex items-center text-[10px] md:text-xs font-black text-brand-accent group/link uppercase tracking-[0.2em]">
                   Explore Our Capabilities
                   <svg className="w-4 h-4 md:w-5 md:h-5 ml-2 transform group-hover/link:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">

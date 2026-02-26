@@ -13,14 +13,14 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 lg:py-24 bg-blue-50">
+    <section id="about" className="py-16 lg:py-24 bg-brand-bg border-y border-white/5">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">
+            <h2 className="text-lg md:text-4xl font-bold text-white mb-6">
               Who <span className="text-brand-accent">We Are</span>
             </h2>
-            <p className="text-base text-slate-600 mb-8 leading-relaxed">
+            <p className="text-sm md:text-base text-slate-400 mb-8 leading-relaxed">
               Based in the heart of Silicon Valley, IT Solutions has been a pioneer in 
               delivering enterprise-grade technology services.
             </p>
@@ -32,7 +32,7 @@ const About = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-sm md:text-lg font-medium text-slate-700">{feature}</span>
+                  <span className="text-xs md:text-lg font-medium text-slate-300">{feature}</span>
                 </div>
               ))}
             </div>
@@ -42,11 +42,11 @@ const About = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className={`p-8 rounded-2xl border border-slate-100 flex flex-col items-center justify-center text-center ${
-                  index === 0 ? 'bg-white shadow-xl sm:col-span-2 md:col-span-1 md:row-span-2' : 'bg-white'
+                className={`p-8 rounded-2xl border border-white/5 flex flex-col items-center justify-center text-center ${
+                  index === 0 ? 'bg-white/5 shadow-xl sm:col-span-2 md:col-span-1 md:row-span-2' : 'bg-white/5'
                 }`}
               >
-                <span className="text-4xl md:text-5xl font-extrabold text-brand-accent mb-2">{stat.value}</span>
+                <span className="text-3xl md:text-5xl font-extrabold text-brand-accent mb-2">{stat.value}</span>
                 <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide">{stat.label}</span>
               </div>
             ))}

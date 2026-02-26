@@ -33,21 +33,21 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-16 lg:py-24 bg-white overflow-hidden">
+    <section id="testimonials" className="py-16 lg:py-24 bg-brand-bg overflow-hidden">
       <div className="container-custom">
         {/* Header with Stats & CTA */}
         <div className="flex flex-col lg:flex-row items-center justify-between mb-20 gap-12">
           <div className="max-w-2xl text-center lg:text-left">
-            <h2 className="text-3xl lg:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+            <h2 className="text-xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
               What Our <span className="text-brand-accent italic font-medium">Partners Say</span>
             </h2>
-            <p className="text-lg text-slate-600 font-medium">
+            <p className="text-sm md:text-lg text-slate-400 font-medium">
               We've helped over 50+ enterprises transform their technical infrastructure. 
               Here is why they trust us.
             </p>
           </div>
 
-          <div className="flex flex-col items-center lg:items-end bg-slate-50 p-10 lg:p-12 rounded-3xl border border-slate-100 shadow-sm w-full lg:w-auto">
+          <div className="flex flex-col items-center lg:items-end bg-white/5 p-10 lg:p-12 rounded-3xl border border-white/5 shadow-sm w-full lg:w-auto">
             <div className="flex items-center space-x-3 mb-4">
               <svg className="h-6 w-auto" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -55,10 +55,10 @@ const Testimonials = () => {
                 <path fill="#FBBC05" d="M5.84 14.11c-.22-.66-.35-1.36-.35-2.11s.13-1.45.35-2.11V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l3.66-2.83z" />
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
               </svg>
-              <span className="text-xl font-bold text-slate-900">Google Reviews</span>
+              <span className="text-xl font-bold text-white">Google Reviews</span>
             </div>
             <div className="flex items-center space-x-6 mb-8">
-              <span className="text-5xl font-black text-slate-900">4.8</span>
+              <span className="text-3xl md:text-5xl font-black text-white">4.8</span>
               <div className="flex flex-col">
                 <div className="flex text-yellow-500 mb-1">
                   {[...Array(5)].map((_, i) => (
@@ -81,7 +81,7 @@ const Testimonials = () => {
       <div className="relative group flex overflow-hidden">
         <div className="flex animate-marquee-slow whitespace-nowrap py-10">
           {[...testimonials, ...testimonials].map((t, i) => (
-            <div key={i} className="flex-shrink-0 w-[400px] mx-6 p-8 bg-slate-50 border border-slate-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+            <div key={i} className="flex-shrink-0 w-[400px] mx-6 p-8 bg-white/5 border border-white/5 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
               <div className="flex text-yellow-500 mb-4">
                 {[...Array(t.rating)].map((_, i) => (
                   <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -89,7 +89,7 @@ const Testimonials = () => {
                   </svg>
                 ))}
               </div>
-              <p className="text-slate-900 font-medium italic mb-6 break-words whitespace-normal leading-relaxed">
+              <p className="text-slate-300 font-medium italic mb-6 break-words whitespace-normal leading-relaxed">
                 "{t.text}"
               </p>
               <div>
@@ -101,8 +101,8 @@ const Testimonials = () => {
         </div>
         
         {/* Gradient Masks - Responsive */}
-        <div className="absolute inset-y-0 left-0 w-16 lg:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-16 lg:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 left-0 w-16 lg:w-32 bg-gradient-to-r from-brand-bg to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-16 lg:w-32 bg-gradient-to-l from-brand-bg to-transparent z-10 pointer-events-none"></div>
       </div>
     </section>
   );

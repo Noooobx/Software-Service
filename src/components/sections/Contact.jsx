@@ -13,10 +13,10 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
             <div className="mb-8 lg:mb-12">
-              <h2 className="text-2xl md:text-4xl lg:text-6xl font-extrabold text-white mb-6 lg:mb-8 tracking-tight leading-[1.1]">
+              <h2 className="text-xl md:text-4xl lg:text-6xl font-extrabold text-white mb-6 lg:mb-8 tracking-tight leading-[1.1]">
                 Let's <span className="text-brand-accent italic font-light">Connect</span>
               </h2>
-              <p className="text-base md:text-xl text-slate-400 leading-relaxed font-medium border-l-4 border-brand-accent pl-6 max-w-xl">
+              <p className="text-sm md:text-xl text-slate-400 leading-relaxed font-medium border-l-4 border-brand-accent pl-6 max-w-xl">
                 Start a conversation about your technical future. Our experts are ready to build solutions that scale with your vision.
               </p>
             </div>

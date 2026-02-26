@@ -33,34 +33,34 @@ const IndustryPortfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 lg:py-32 bg-slate-100 relative overflow-hidden">
+    <section id="portfolio" className="py-20 lg:py-32 bg-brand-bg relative overflow-hidden">
       {/* Blueprint Watermark Background */}
       <div className="absolute top-0 right-0 w-full h-full opacity-[0.05] pointer-events-none select-none overflow-hidden">
         <svg className="w-[150%] h-[150%] -rotate-12 -translate-y-1/4" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 100H1000M0 200H1000M0 300H1000M0 400H1000M0 500H1000M0 600H1000M0 700H1000M0 800H1000M0 900H1000" stroke="#1A365D" strokeWidth="1" strokeDasharray="10 10"/>
-          <path d="M100 0V1000M200 0V1000M300 0V1000M400 0V1000M500 0V1000M600 0V1000M700 0V1000M800 0V1000M900 0V1000" stroke="#1A365D" strokeWidth="1" strokeDasharray="10 10"/>
+          <path d="M0 100H1000M0 200H1000M0 300H1000M0 400H1000M0 500H1000M0 600H1000M0 700H1000M0 800H1000M0 900H1000" stroke="#fff" strokeWidth="1" strokeDasharray="10 10"/>
+          <path d="M100 0V1000M200 0V1000M300 0V1000M400 0V1000M500 0V1000M600 0V1000M700 0V1000M800 0V1000M900 0V1000" stroke="#fff" strokeWidth="1" strokeDasharray="10 10"/>
         </svg>
       </div>
 
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mb-20">
-          <h2 className="text-4xl lg:text-6xl font-extrabold text-slate-900 mb-8 tracking-tight leading-[1.1]">
+          <h2 className="text-2xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-[1.1]">
             Industries <span className="text-brand-accent italic font-light">We Support</span>
           </h2>
-          <p className="text-xl text-slate-600 leading-relaxed font-medium border-l-4 border-brand-accent pl-6">
+          <p className="text-lg md:text-xl text-slate-400 leading-relaxed font-medium border-l-4 border-brand-accent pl-6">
             Professional technology solutions built on a foundation of 
             security, stability, and future-proof design.
           </p>
         </div>
 
-        {/* Bento-style Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 auto-rows-[280px] md:auto-rows-[300px]">
+        {/* Bento-style Layout: Mobile Horizontal Scroll / Desktop Grid */}
+        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-6 lg:gap-8 pb-8 md:pb-0 scrollbar-dotted">
           {industries.map((item, index) => (
             <div
               key={item.name}
-              className={`relative overflow-hidden group bg-white border border-slate-200 rounded-3xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col
+              className={`relative overflow-hidden group bg-white/5 border border-white/10 rounded-3xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col min-w-[85vw] md:min-w-0 snap-start snap-always h-[300px] md:h-auto
                 ${item.size === 'xl' ? 'md:col-span-2' : ''}
-                ${item.size === 'lg' ? 'row-span-2' : ''}
+                ${item.size === 'lg' ? 'md:row-span-2' : ''}
               `}
             >
               {/* Dynamic Gradient Background */}
@@ -80,10 +80,10 @@ const IndustryPortfolio = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight group-hover:translate-x-1 transition-transform">
+                  <h3 className="text-lg md:text-3xl font-bold text-white mb-4 tracking-tight group-hover:translate-x-1 transition-transform">
                     {item.name}
                   </h3>
-                  <p className="text-slate-600 font-medium leading-relaxed max-w-xs text-[15px] md:text-lg">
+                  <p className="text-slate-400 font-medium leading-relaxed max-w-xs text-[13px] md:text-lg">
                     {item.description}
                   </p>
                 </div>
